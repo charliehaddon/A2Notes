@@ -1,0 +1,52 @@
+\documentclass[a4paper,8pt]{article}
+\usepackage[margin=3cm,includefoot]{geometry}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\lfoot{\sc Charlie Haddon}
+
+\begin{document}
+
+\begin{titlepage}
+	\title{G484: Newtonian World}
+	\author{Charlie Haddon}
+	\date{}
+	\pagenumbering{}
+	\maketitle
+	\vspace{15cm}
+\end{titlepage}
+
+\clearpage
+\pagenumbering{arabic}
+
+\section{General Motion}
+
+\subsection{Newton's Laws of Motion}
+
+Newton's three laws of motion are as follows:
+\begin{enumerate}
+	\item An object will remain at rest or move with constant velocity unless an external force acts upon it.
+	\item The resultant force on an object is equal to its mass multiplied by its acceleration, $F=ma$ for constant mass.
+	\item When a body exerts a force on another body, the second body simultaneously exerts an equal and opposite force on the original body.
+\end{enumerate}
+\\
+Definitions:
+\begin{itemize}
+	\item Linear momentum, $p$ (\si{\kilo\gram\metre\per\square\second}), is defined as the product of the mass and velocity of an object and is a vector quantity. 
+	\item Net force, $F$ (\si{\newton}), on a body is equal to the rate of change of its momentum, $F=\frac{dp}{dt}$ or if the force is approximately constant, $F \approx \frac{\Delta p}{\Delta t}$
+	\item Impulse, $J$ (\si{\newton\second}), is the integral of force over time or for constant force; force multipied by time and is therefore equal to the change in momentum, $mv-mu$.
+\end{itemize}
+\\
+
+\subsection{Collisions}
+The principle of conservation of momentum states that the momentum of a system remains constant if no external force acts upon it. This princible is invaluable for calculating the velocities and masses in an n-body collision. For example, in a collision involving 2 bodies, $A$ and $B$:
+$$m_A u_A + m_B u_B = m_A v_A + m_B v_B$$
+or if the objects coalesce to form a single object, $C$:
+$$m_A u_A + m_B u_B = (m_A + m_B) v_C$$
+In a perfectly elastic collision, both momentum and kinetic energy are conserved, whereas in an inelastic collision, only momentum is conserved as some kinetic energy is lost to things like heat and sound etc.
+
+\section{Circular Motion}
+A radian is the angle subtended at the centre of a circle by and arc length equal to the circle's radius. One radian is equal to $\frac{180}{\pi}$ degrees.
+
+\end{document}
