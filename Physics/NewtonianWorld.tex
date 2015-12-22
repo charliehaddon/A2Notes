@@ -3,8 +3,9 @@
 \usepackage{siunitx}
 \usepackage{fancyhdr}
 \usepackage{tikz}
-\usetikzlibrary{arrows,shapes,positioning,calc}
+	\usetikzlibrary{arrows,shapes,positioning,calc}
 \usepackage[font=it]{caption}
+\usepackage{amsmath}
 
 \pagestyle{fancy}
 \lfoot{\sc Charlie Haddon}
@@ -148,7 +149,7 @@ Circular motion is the result of a force acting perpendicular to an object's vel
 	\draw (0:2) arc (0:60:2);
 	\draw (0:2) -- (60:2);
 	\node at ($(2,0) + (120:1) - (30:0.3)$) {$s$};
-	\draw (0:0.3) arc (0:60:0.2);
+	\draw (0:0.3) arc (0:60:0.3);
 	\node (theta) at (30:0.6) {$\delta\theta$};
 
 	\draw (0,0) -- (2,0);
@@ -185,5 +186,25 @@ A gravitational field is produced by all bodies with mass. By Newton's law of gr
 \end{figure}
 
 The constant of proportionality that relates gravitational force to mass and distance is $G$ and the equation for the force between two spherical or point masses is $F=-\frac{GMm}{r^2}$ where $M$ and $m$ are the masses of the two bodies and $r$ is the distance between them. By dividing throughout by one of the mass terms, the equation also gives the gravitational field strength of a point with distance $r$ from a mass: $g=-\frac{GM}{r^2}$. For large bodies like the Earth the gravitational field strength at the surface is approximately uniform. For the Earth this value is approximately equal to 9.81\si{\meter\per\square\second} (acceleration of free fall).
+
+For an oscillating object or object in circular motion the time taken to complete a full cycle of motion is called a period. Kepler found by observation that that for all the planets in the solar system $T^2 \propto r^3$ where $T$ is the period of the planet's orbit and $r$ is its distance from Earth. This equation works only for objects in circular orbits and is dervied thusly:
+
+By equating gravitational force and centripetal force:
+$$\frac{GMm}{r^2} = \frac{mv^2}{r}$$
+
+Dividing through by $m$ and multiplying by $r^2$:
+$$GM = rv^2$$
+
+Substituting in $v = \frac{2 \pi r}{T}$:
+$$GM = r\left(\frac{2 \pi r}{T}\right)^2$$
+$$\implies GM = \frac{4 {\pi}^2 r^3}{T^2}$$
+
+And finally, rearranging for $T^2$:
+$$T^2 = \left(\frac{4 {\pi}^2}{GM}\right)r^3$$
+
+As $\frac{4 {\pi}^2}{GM}$ is constant:
+$$T^2 \propto r^3$$
+
+Satellites that orbit the Earth about the equator with a period of one day are called geostationary because they remain directly above the same point on the Earth at all times and are therefore stationary relative to Earth. This is particularly useful for communication satellites as it provides reliable coverage of a specific area meaning antannae don't need to track them and can be produced and maintained much more cheaply.
 
 \end{document}
