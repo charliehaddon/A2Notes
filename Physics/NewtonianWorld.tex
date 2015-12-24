@@ -215,9 +215,46 @@ Simple harmonic motion is a type of motion where an object oscillates with a res
 	\item The period of an oscillation is the time between two identical points in the cycle, most commonly the points at which the oscillating object has zero displacement and positive velocity.
 	\item Frequency is the inverse of period i.e. the number of full oscillations per unit time.
 	\item Angular frequency is the magnitude of the vector quantity angular velocity (angular displacement per unit time) or $\frac{2\pi}{T}$ for objects in circular motion.
-	\item Phase difference is the amount 2 sinusoidal functions are offset from eachother, measured in radians.
+	\item Phase difference is the amount two sinusoidal functions are offset from eachother, measured in radians.
 \end{itemize}
 
-The defining equation of simple harmonic motion is $a=-(2\pi f)^2 x$ as acceleration is proportional to displacement, $x$, with the constant of proportionality $-(2\pi f)^2$ where $f$ is the frequency of the oscillation. 
+The defining equation of simple harmonic motion is $a=-(2\pi f)^2 x$ as acceleration is proportional to displacement, $x$, with the constant of proportionality $-(2\pi f)^2$ where $f$ is the frequency of the oscillation. $2\pi f$ is angular frequency often reffered to by the letter $\omega$. Some other important equations for SHM are general solutions to the previous differential equation: $x=Acos\omega$ and $x=Asin\omega$. Therefore the maximum velocity of the oscillating object is given by: $v_\text{max}=\omega A$. It should be noted that the amplitude scales the function only in the $x$ direction and the scale in the $t$ direction remains the same. This means that the amplitude of the oscillation does not change the frequency or period.
+\vspace{8pt}
+
+The relationships between time and displacement, velocity and acceleration for simple harmonic motion where $x=Asin\omega$:
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
+	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t] plot ({\t},{sin(deg(\t))});
+\end{tikzpicture}
+\end{center}
+\caption{Displacement against time}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
+	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t] plot ({\t},{cos(deg(\t))});
+\end{tikzpicture}
+\end{center}
+\caption{Velocity against time}
+\end{figure}
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
+	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t] plot ({\t},{-sin(deg(\t))});
+\end{tikzpicture}
+\end{center}
+\caption{Acceleration against time}
+\end{figure}
+
+These relationships stem from the fact that for $x=sint$: $\dot{x}=cost$ and $\ddot{x}=-sint$
 
 \end{document}
