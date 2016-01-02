@@ -257,4 +257,68 @@ The relationships between time and displacement, velocity and acceleration for s
 
 These relationships stem from the fact that for $x=sint$: $\dot{x}=cost$ and $\ddot{x}=-sint$
 
+As an object oscillates between displacements of $-A$ and $A$, potentital energy is converted into kinetic energy and vice versa. When the object's displacement is equal to $\pm A$ it has maximum potential energy and zero kinetic energy. As the object returns to the equilibrium point where dispacement is zero, its potential energy  is converted into kinetic energy until it reaches maximum kinetic energy and zero potential energy. As the object moves from the equilibrium point the kietic energy is again converted into potential energy as the object approaches $\mp A$. The kinetic energy is proportional to the square of the velocity and the potential energy could be gravitational potential energy or elastic potential energy etc. 
+Damping creates exponential decay in the oscillators sinusoidal motion causing the amplitude of the motion to reduce with time.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
+	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,black ] plot ({\t},{cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,blue  ] plot ({\t},{exp(-0.2*\t)*cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,red   ] plot ({\t},{exp(-0.8*\t)*cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,orange] plot ({\t},{exp(-2*\t)});
+
+	\draw[black ] (2*pi-1.5,-1.7) -- (2*pi-0.5,-1.7) node[right] {Undamped};
+	\draw[blue  ] (2*pi-1.5,-2.2) -- (2*pi-0.5,-2.2) node[right] {Light damping};
+	\draw[red   ] (2*pi-1.5,-2.7) -- (2*pi-0.5,-2.7) node[right] {Heavy damping};
+	\draw[orange] (2*pi-1.5,-3.2) -- (2*pi-0.5,-3.2) node[right] {Critical damping};
+\end{tikzpicture}
+\end{center}
+\caption{Damped oscillation}
+\end{figure}
+
+The principles of oscillations and resonance are utilised in musical instruments and various other apparatus. Forced oscillations are used in speakers. Objects have a natural frequency based on their physical properties at which they will oscillate with the greatest amplitude(resonance). This has to be considered when constructing buildings and bridges because vibrations that have almost the same frequency as the natural frequency of the contruction can cause oscillations with large amplitude resulting in structural failure and collapse.
+
+\begin{figure}[h]
+\begin{center}
+\begin{tikzpicture}
+	\draw[->] (0,0) -- (3*3.1,0) node[right] {$f$};
+	\draw[->] (0,0) -- (0,3) node[above] {$A$};
+	\draw[smooth,samples=100,domain=0:3,variable=\f,black] plot ({\f*3},{0.5/(sqrt((1-\f^2)^2+(0.1*2*\f)^2))});
+	\draw[smooth,samples=100,domain=0:3,variable=\f,blue ] plot ({\f*3},{0.5/(sqrt((1-\f^2)^2+(0.2*2*\f)^2))});
+	\draw[smooth,samples=100,domain=0:3,variable=\f,red  ] plot ({\f*3},{0.5/(sqrt((1-\f^2)^2+(0.3*2*\f)^2))});
+
+	\filldraw[black] (3,0  ) circle (1pt) node[below] {$f_0$};
+	\filldraw[black] (1.5,0) circle (1pt) node[below] {$\frac{1}{2}f_0$};
+	\filldraw[black] (6,0  ) circle (1pt) node[below] {$2f_0$};
+
+	\draw[black] (1.5*3.1-1.5,-0.7) -- (1.5*3.1-0.5,-0.7) node[right] {Undamped};
+	\draw[blue ] (1.5*3.1-1.5,-1.2) -- (1.5*3.1-0.5,-1.2) node[right] {Light damping};
+	\draw[red  ] (1.5*3.1-1.5,-1.7) -- (1.5*3.1-0.5,-1.7) node[right] {Heavy damping};
+\end{tikzpicture}
+\end{center}
+\caption{Forced oscillation}
+\end{figure}
+
+\section{Thermal Physics}
+Kinetic theory describes substances as structures comprised of particles (atoms, molecules, etc.) with various kinetic energies. Classical kinetic theory allows matter to exist in a solid, liquid or gaseous state.
+
+\begin{itemize}
+	\item Properties of solids:
+		\begin{itemize}
+			\item Regular three-dimensional structure.
+			\item Particles are bonded together by strong electrostatic attraction.
+			\item There is little space between particles.
+			\item Particles oscillate in simple harmonic motion about fixed positions.
+			\item Heating increases the kinetic energy of the particles resulting in increased amplitude of oscillation.
+			\item If the particles are heated so that they are able to break free of their bonds, the heat energy is converted to potential energy and the solid melts.
+		\end{itemize}
+	\item Properties of liquids:
+		\begin{itemize}
+			\item
+		\end{itemize}
+\end{itemize}
+
 \end{document}
