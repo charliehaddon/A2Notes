@@ -6,6 +6,7 @@
 	\usetikzlibrary{arrows,shapes,positioning,calc}
 \usepackage[font=it]{caption}
 \usepackage{amsmath}
+\usepackage{float}
 
 \pagestyle{fancy}
 \lfoot{\sc Charlie Haddon}
@@ -48,7 +49,7 @@ and some definitions of physical quantities:
 The principle of conservation of momentum states that the momentum of a system remains constant if no external force acts upon it. This princible is invaluable for calculating the velocities and masses in an n-body collision. For example, in a collision involving 2 bodies, $A$ and $B$:
 $$m_A u_A + m_B u_B = m_A v_A + m_B v_B$$
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 Before collision:\\
 \vspace{0.25cm}
@@ -86,7 +87,7 @@ After collision:\\
 or if the objects coalesce to form a single object, $C$:
 $$m_A u_A + m_B u_B = (m_A + m_B) v_C$$
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 Before collision:\\
 \vspace{0.25cm}
@@ -122,7 +123,7 @@ In a perfectly elastic collision, both momentum and kinetic energy are conserved
 \subsection{Circular Motion}
 A radian is the natural unit for measuring angles. A radian is defined as the angle subtended at the centre of a circle by an arc length equal to the circle's radius. One radian is equal to $\frac{180}{\pi}$ degrees.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
 	\filldraw[black] (0,0) circle (1pt);
@@ -141,7 +142,7 @@ A radian is the natural unit for measuring angles. A radian is defined as the an
 
 Circular motion is the result of a force acting perpendicular to an object's velocity, keeping the object at a fixed distance, $r$, from the origin. The general term for this force is centripetal force. An object undergoing circular motion is not in equilibrium as the resultant force is towards the centre of the circle, therefore the object is also accelerating towards the centre of the circle (centripetal acceleration). The speed of such an object is equal to $\frac{2\pi r}{T}$ where $r$ is the radius of the motion and $T$ is the time period (the time taken to complete a full cycle). The cetripetal acceleration is equal to $\frac{v^2}{r}$ where $v$ is the linear velocity calculated as before. Therefore, by Newton's second law, $F=ma$, centripetal force is equal to $\frac{mv^2}{r}$.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
 	\filldraw[black] (0,0) circle (1pt) node[below] {$O$};
@@ -171,7 +172,7 @@ Circular motion is the result of a force acting perpendicular to an object's vel
 \subsection{Gravitational Fields}
 A gravitational field is produced by all bodies with mass. By Newton's law of gravitation: Two bodies with mass exert a force on eachother proportional to the product of their masses and inversely proportional to the square of the distance between them. Gravitational field strength, $g$ (\si{\newton\per\kilo\gram}), is a measure of the force exerted on an object by a gravitational field per unit mass. Gravitational fields can be graphically represented using field lines showing the sources of gravitational field.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
 	\node[draw,circle] (O) at (0,0) {$m$};
@@ -208,7 +209,7 @@ $$T^2 \propto r^3$$
 Satellites that orbit the Earth about the equator with a period of one day are called geostationary because they remain directly above the same point on the Earth at all times and are therefore stationary relative to Earth. This is particularly useful for communication satellites as it provides reliable coverage of a specific area meaning antannae don't need to track them and can be produced and maintained much more cheaply.
 
 \subsection{Simple Harmonic Oscillations}
-Simple harmonic motion is a type of motion where an object oscillates with a resistive force proportional to the object's displacement from an equilibrium position and in the opposite direction. Some objects in the physical world oscillate in a way that approximates simple harmonic motion. Examples include pendulums and masses hanging from springs. The course requires that one can define certain terms relating to SHM:
+Simple harmonic motion is a type of motion where an object oscillates with a restorative force proportional to the object's displacement from an equilibrium position and in the opposite direction. Some objects in the physical world oscillate in a way that approximates simple harmonic motion. Examples include pendulums and masses hanging from springs. The course requires that one can define certain terms relating to SHM:
 \begin{itemize}
 	\item Displacement is the vector distance between two objects. For example: between the equilibrium point and an object undergoing SHM.
 	\item Amplitude with regards to SHM is the maximum displacement of the oscillating object from the equilibrium point.
@@ -221,48 +222,31 @@ Simple harmonic motion is a type of motion where an object oscillates with a res
 The defining equation of simple harmonic motion is $a=-(2\pi f)^2 x$ as acceleration is proportional to displacement, $x$, with the constant of proportionality $-(2\pi f)^2$ where $f$ is the frequency of the oscillation. $2\pi f$ is angular frequency often reffered to by the letter $\omega$. Some other important equations for SHM are general solutions to the previous differential equation: $x=Acos\omega$ and $x=Asin\omega$. Therefore the maximum velocity of the oscillating object is given by: $v_\text{max}=\omega A$. It should be noted that the amplitude scales the function only in the $x$ direction and the scale in the $t$ direction remains the same. This means that the amplitude of the oscillation does not change the frequency or period.
 \vspace{8pt}
 
-The relationships between time and displacement, velocity and acceleration for simple harmonic motion where $x=Asin\omega$:
-\begin{figure}[h]
+The relationships between time and displacement, velocity and acceleration for simple harmonic motion where $x=Asin\omega$ ($x=sint$: $\dot{x}=cost$ and $\ddot{x}=-sint$):
+\begin{figure}[H]
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.9]
 	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
-	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
-	\draw[smooth,samples=100,domain=0:4*pi,variable=\t] plot ({\t},{sin(deg(\t))});
+	\draw[->] (0,-1.5) -- (0,1.5) node[above] {};
+
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,black] plot ({\t},{sin(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,blue ] plot ({\t},{cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,red  ] plot ({\t},{-sin(deg(\t))});
+	
+	\draw[black ] (2*pi-1.5,-1.7) -- (2*pi-0.5,-1.7) node[right] {Displacement};
+	\draw[blue  ] (2*pi-1.5,-2.2) -- (2*pi-0.5,-2.2) node[right] {Velocity};
+	\draw[red   ] (2*pi-1.5,-2.7) -- (2*pi-0.5,-2.7) node[right] {Acceleration};
 \end{tikzpicture}
 \end{center}
-\caption{Displacement against time}
+\caption{Simple harmonic motion}
 \end{figure}
-
-\begin{figure}[h]
-\begin{center}
-\begin{tikzpicture}
-	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
-	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
-	\draw[smooth,samples=100,domain=0:4*pi,variable=\t] plot ({\t},{cos(deg(\t))});
-\end{tikzpicture}
-\end{center}
-\caption{Velocity against time}
-\end{figure}
-
-\begin{figure}[h]
-\begin{center}
-\begin{tikzpicture}
-	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
-	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
-	\draw[smooth,samples=100,domain=0:4*pi,variable=\t] plot ({\t},{-sin(deg(\t))});
-\end{tikzpicture}
-\end{center}
-\caption{Acceleration against time}
-\end{figure}
-
-These relationships stem from the fact that for $x=sint$: $\dot{x}=cost$ and $\ddot{x}=-sint$
 
 As an object oscillates between displacements of $-A$ and $A$, potentital energy is converted into kinetic energy and vice versa. When the object's displacement is equal to $\pm A$ it has maximum potential energy and zero kinetic energy. As the object returns to the equilibrium point where dispacement is zero, its potential energy  is converted into kinetic energy until it reaches maximum kinetic energy and zero potential energy. As the object moves from the equilibrium point the kietic energy is again converted into potential energy as the object approaches $\mp A$. The kinetic energy is proportional to the square of the velocity and the potential energy could be gravitational potential energy or elastic potential energy etc. 
 Damping creates exponential decay in the oscillators sinusoidal motion causing the amplitude of the motion to reduce with time.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.9]
 	\draw[->] (-1,0) -- (4*pi+0.1,0) node[right] {$t$};
 	\draw[->] (0,-1.5) -- (0,1.5) node[above] {$x$};
 	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,black ] plot ({\t},{cos(deg(\t))});
@@ -281,14 +265,14 @@ Damping creates exponential decay in the oscillators sinusoidal motion causing t
 
 The principles of oscillations and resonance are utilised in musical instruments and various other apparatus. Forced oscillations are used in speakers. Objects have a natural frequency based on their physical properties at which they will oscillate with the greatest amplitude(resonance). This has to be considered when constructing buildings and bridges because vibrations that have almost the same frequency as the natural frequency of the contruction can cause oscillations with large amplitude resulting in structural failure and collapse.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
 	\draw[->] (0,0) -- (3*3.1,0) node[right] {$f$};
-	\draw[->] (0,0) -- (0,3) node[above] {$A$};
-	\draw[smooth,samples=100,domain=0:3,variable=\f,black] plot ({\f*3},{0.5/(sqrt((1-\f^2)^2+(0.1*2*\f)^2))});
-	\draw[smooth,samples=100,domain=0:3,variable=\f,blue ] plot ({\f*3},{0.5/(sqrt((1-\f^2)^2+(0.2*2*\f)^2))});
-	\draw[smooth,samples=100,domain=0:3,variable=\f,red  ] plot ({\f*3},{0.5/(sqrt((1-\f^2)^2+(0.3*2*\f)^2))});
+	\draw[->] (0,0) -- (0,6) node[above] {$A$};
+	\draw[smooth,samples=100,domain=0:3,variable=\f,black] plot ({\f*3},{1/(sqrt((1-\f^2)^2+(0.1*2*\f)^2))});
+	\draw[smooth,samples=100,domain=0:3,variable=\f,blue ] plot ({\f*3},{1/(sqrt((1-\f^2)^2+(0.2*2*\f)^2))});
+	\draw[smooth,samples=100,domain=0:3,variable=\f,red  ] plot ({\f*3},{1/(sqrt((1-\f^2)^2+(0.3*2*\f)^2))});
 
 	\filldraw[black] (3,0  ) circle (1pt) node[below] {$f_0$};
 	\filldraw[black] (1.5,0) circle (1pt) node[below] {$\frac{1}{2}f_0$};
@@ -303,6 +287,7 @@ The principles of oscillations and resonance are utilised in musical instruments
 \end{figure}
 
 \section{Thermal Physics}
+\subsection{Solids, Liquids and Gases}
 Kinetic theory describes substances as structures comprised of particles (atoms, molecules, etc.) with various kinetic energies. Classical kinetic theory allows matter to exist in a solid, liquid or gaseous state.
 
 \begin{itemize}
@@ -317,8 +302,37 @@ Kinetic theory describes substances as structures comprised of particles (atoms,
 		\end{itemize}
 	\item Properties of liquids:
 		\begin{itemize}
-			\item
+			\item Particles remain in contact but are free to move therefore, liquids have no fixed shape.
+			\item The separation of particles is about the same as in a solid.
+			\item Increasing the temperature of a liquid increases the kinetic energy of the molecules until they are able to break free from eachother (vaporisation).
+		\end{itemize}
+	\item Properties of gases:
+		\begin{itemize}
+			\item Intermolecular forces are negligible so the dominant force is the reaction when particles collide with the walls of the container.
+			\item Particles are about ten times further apart than in solids or liquids.
+			\item Heating a gas causes an increase in the kinetic energy and speed of particles.
 		\end{itemize}
 \end{itemize}
 
+Particles in liquids and gases appear to move randomly, frequently changing direction. This is called Brownian motion after botanist Robert Brown who observed this motion with pollen grains suspended in water. The motion can be explained using kinetic theory and its effect can be demonstrated using a smoke cell and a microscope. A glass cell is filled with smoke and placed under a low-power microscope and a light is shone on the cell from the side. One may remove the eyepiece and replace it with a video camera to record the effect. The smoke particles travel in a direction at a fairly constant speed then spontaneously change direction and continue to travel at approximately the same speed. The effect can be explained by considering a single smoke particle. The smoke particle is very large compared to the surrounding air molecules which are colliding with it at random. At any given moment the particle has a net force in a particular direction because the vector sum of the impacts has a particular direction because there is an imbalance in the number of molecules colliding with each side of the smoke particle. Thus the particles appears to have a random 'jerky' motion.
+
+The pressure of a gas is the force exerted per unit area of its container, $p=\frac{F}{A}$ (\si{\newton\per\square\meter} or \si{\pascal}). Pressure of a gas can be explained in terms of particles using kinetic theory assuming that:
+
+\begin{itemize}
+	\item All collisions are perfectly elastic.
+	\item The time of a collision is negligible compared to the time between collisions.
+	\item The size of the molecules is negligible compared to the size of the container.
+	\item Intermolecular forces are negligible.
+\end{itemize}
+
+Consider a gas inside a container: Particles of the gas move randomly and collide with the walls. When a gas particle collides with a wall its momentum is flipped in the direction of the normal to the surface and therefore a force is exerted on the wall. Because the number of molecules is large, the net force exerted on the walls is measureable and approximately uniform.
+
+The internal energy of a substance is the sum of the random distribution of the kinetic and potential energies of its particles. The internal energy of a substance continuously increases as it is heated. Consider a solid that is being heated at a constant rate. The temperature increase first contributes to the kinetic energy, increasing the amplitude of the particles' vibrations until the solid reaches its melting point. Now the thermal energy is used to break the bonds holding the particles together, increasing the potential enrgy while the kinetic energy remains constant. The solid then melts to form a liquid and follows similar behaviour as it heats until it evaporates. Thermal energy is distinct from internal energy and is defined as the energy transferrred between two points as a result of a temperature difference betweeen them. The internal energy of a system is increased by supplying thermal energy or doing work on the system and reduced by transferring thermal energy away from the system or lettingthe system do work on the surroundings.
+
+Consider a cylinder full of air sealed by a piston. Supplying heat to the cylinder whilst the piston remains stationary causes an increase in the kinetic and internal energies of the air. Depressing the piston does work on the air, increasing the potential and internal energies of the air. The temperature changes with the kinetic energy of the particles.
+
+Liquids can evaporate at temperatures lower than their boiling point. This is due to the distribution of molecules with various kinetic energies. Molecules with higher energy may escape from the surface of the liquid. The rate of evaporation is modified by the temperature of the liquid, the surface area of the liquid and the rate at which the escaped particles are carried away (e.g. surface airflow).
+
+\subsection{Temperature}
+ 
 \end{document}
