@@ -326,16 +326,34 @@ The pressure of a gas is the force exerted per unit area of its container, $p=\f
 
 Consider a gas inside a container: Particles of the gas move randomly and collide with the walls. When a gas particle collides with a wall its momentum is flipped in the direction of the normal to the surface and therefore a force is exerted on the wall. Because the number of molecules is large, the net force exerted on the walls is measureable and approximately uniform.
 
-The internal energy of a substance is the sum of the random distribution of the kinetic and potential energies of its particles. The internal energy of a substance continuously increases as it is heated. Consider a solid that is being heated at a constant rate. The temperature increase first contributes to the kinetic energy, increasing the amplitude of the particles' vibrations until the solid reaches its melting point. Now the thermal energy is used to break the bonds holding the particles together, increasing the potential enrgy while the kinetic energy remains constant. The solid then melts to form a liquid and follows similar behaviour as it heats until it evaporates. Thermal energy is distinct from internal energy and is defined as the energy transferrred between two points as a result of a temperature difference betweeen them. The internal energy of a system is increased by supplying thermal energy or doing work on the system and reduced by transferring thermal energy away from the system or lettingthe system do work on the surroundings.
+\begin{figure}[H]
+\begin{tikzpicture}
+\end{tikzpicture}
+\caption{Kinetic pressure model}
+\end{figure}
+
+The internal energy of a substance is the sum of the random distribution of the kinetic and potential energies of its particles. The internal energy of a substance continuously increases as it is heated. Consider a solid that is being heated at a constant rate. The temperature increase first contributes to the kinetic energy, increasing the amplitude of the particles' vibrations until the solid reaches its melting point. Now the thermal energy is used to break the bonds holding the particles together, increasing the potential enrgy while the kinetic energy remains constant. The solid then melts to form a liquid and follows similar behaviour as it heats until it evaporates. Thermal energy is distinct from internal energy and is defined as the energy transferrred between two points as a result of a temperature difference betweeen them. The internal energy of a system is increased by supplying thermal energy or doing work on the system and reduced by transferring thermal energy away from the system or letting the system do work on the surroundings.
+
+\begin{figure}[H]
+\begin{tikzpicture}
+\end{tikzpicture}
+\caption{Temperature during state changes}
+\end{figure}
 
 Consider a cylinder full of air sealed by a piston. Supplying heat to the cylinder whilst the piston remains stationary causes an increase in the kinetic and internal energies of the air. Depressing the piston does work on the air, increasing the potential and internal energies of the air. The temperature changes with the kinetic energy of the particles.
 
 Liquids can evaporate at temperatures lower than their boiling point. This is due to the distribution of molecules with various kinetic energies. Molecules with higher energy may escape from the surface of the liquid. The rate of evaporation is modified by the temperature of the liquid, the surface area of the liquid and the rate at which the escaped particles are carried away (e.g. surface airflow).
 
+\begin{figure}[H]
+\begin{tikzpicture}
+\end{tikzpicture}
+\caption{Evaporation}
+\end{figure}
+
 \subsection{Temperature}
 On average, thermal energy is transferred from regions of higher temperature to regions of lower temperature; for two objects $A$ and $B$, if $T_A>T_B$, there is a net flow of thermal energy from $A$ to $B$. Therefore the temperature of $A$ decreases and the temperature of $B$ increases until they are equal. When the rate of transfer of heat energy from $A$ to $B$ equals the rate of transfer of heat energy from $B$ to $A$, $A$ and $B$ have reached thermal equilibrium. Temperature is the property which determines whether or not an object is in thermal equilibrium with another.
 
-There are various temerature scales in usse today, all of which are based on two fixed points:
+There are various temerature scales in use today, all of which are based on two fixed points:
 
 \begin{itemize}
 	\item The Celsius scale:
@@ -351,5 +369,34 @@ There are various temerature scales in usse today, all of which are based on two
 \end{itemize}
 
 The Kelvin scale is the most widely used in science today because it is absolute. That is, it is based on a fundamental property of the universe (absolute zero, minimalinternal energy) rather than a property of a particular material. Absolute zero is calculated theroetically using the idea of a 'perfect heat engine'. The pressure of a fixed mass of gas in a sealed container of fixed volume is found to decrease as the teperature is reduced. This behaviour can be extrapolated to find the temperature of a gas that exerts zero pressure on its container: -273\si\celsius. Absolute temerature tends to be represented by the symbol $T$ where degrees of temerature are represented by $\theta$.
+
+$$T(\si\kelvin) = \theta(\si\celsius) + 273.15$$
+
+\subsection{Thermal Properties of Materials}
+The change in teperature of an object is influnced by:
+
+\begin{itemize}
+	\item The heat energy supplied to the object, $\Delta\theta \propto E$.
+	\item The mass of the object, $\Delta\theta \propto \frac{1}{m}$.
+	\item The heat capacity of the object.
+\end{itemize}
+
+The specific heat capacity, $c$ (\si{J kg^{-1} K^{-1}}) of a substance is the amount of energy required to raise the temperature of 1\si{\kilogram} of the substance by 1\si{\kelvin} assuming no change of state. The energy required to produce a certain temperature change is given by:
+
+$$E = mc \Delta T$$ 
+
+There is a simple method to measure the specific heat capacity of a solid. 
+
+\begin{figure}[H]
+\begin{tikzpicture}
+\end{tikzpicture}
+\caption{An experiment to measure specific heat capacity}
+\end{figure}
+
+Latent heat is the heat energy that a body will absorb or givve out when changing state. The heat produced by a substance changing from liquid to solid with no temperature change is called latent heat of fusion and the heat required to change a substance from liquid to gas with no change in temperature is called lantent heat of vaporisation. The specific latent heat of fusion (or vaporisation) of a substance is the energy required to change 1\si{\kilogram} of the substance from solid to liquid (or liquid to gas) at constant temperature.
+
+$$E = ml$$
+
+\subsection{Ideal Gases}
 
 \end{document}
