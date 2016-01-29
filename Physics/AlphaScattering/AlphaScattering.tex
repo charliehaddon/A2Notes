@@ -1,0 +1,55 @@
+\documentclass[a4,8pt]{article}
+\usepackage[margin=3cm,includefoot]{geometry}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+	\usetikzlibrary{arrows,shapes,positioning,calc}
+\usepackage[font=it]{caption}
+\usepackage{amsmath}
+\usepackage{float}
+
+\pagestyle{fancy}
+\lfoot{\sc Charlie Haddon}
+
+\title{Alpha Scattering}
+\author{Charlie Haddon}
+
+\begin{document}
+\begin{titlepage}
+	\pagenumbering{}
+	\maketitle
+	\vspace{15cm}
+\end{titlepage}
+\clearpage
+
+\pagenumbering{arabic}
+
+
+\section{Rutherford Scattering}
+To explore the composition of atoms, Ernest Rutherford and a number of his colleagues contructed an experiment to probe the physical properties of gold. By firing alpha partiles at a sheet of gold foil he could deduce the distribution of charges in the atoms. He found that most of the alpha particles passed through the foil unmolested but one in eight-thousand reboundedin the opposite direction. He famously likened this behaviour to firing a bullet at tissue paper and having it bounce back. This shows that atoms must be mostly empty space with a dense, positively charged object in the centre. We are ableto calculate the distance of closest approach by Coulomb's Law:
+
+$$F = \frac{Q_1 Q_2}{4\pi \epsilon _0 r^2}$$ 
+
+As we know both the charge of the alpha particles ($+2\text{e}$) ,the number of protons in a gold atom (79) and the mass of an alpha particle we can use the force required to reverse the direction of an alpha particle ($\approx300\si\newton$) to calculate $r$:
+
+$$r = 10^{-14} \si\meter$$ 
+
+\begin{figure}[H]
+\begin{center}
+\begin{tikzpicture}
+\end{tikzpicture}
+\caption{Closest approach}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\begin{tikzpicture}
+	\draw[gray] (0,0) circle [radius=3];
+	\filldraw[black] (0,0) circle (2pt);
+\end{tikzpicture}
+\caption{The nuclear model}
+\end{center}
+\end{figure}
+
+\end{document}
