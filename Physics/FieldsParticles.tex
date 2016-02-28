@@ -1,0 +1,66 @@
+\documentclass[a4,8pt]{article}
+\usepackage[margin=3cm,includefoot]{geometry}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+	\usetikzlibrary{arrows,shapes,positioning,calc}
+\usepackage[font=it]{caption}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{pst-electricfield}
+
+\pagestyle{fancy}
+\lfoot{\sc Charlie Haddon}
+
+\title{G485: Fields, Particles and Frontiers of Physics}
+\author{Charlie Haddon}
+
+\begin{document}
+\begin{titlepage}
+	\pagenumbering{}
+	\maketitle
+	\vspace{15cm}
+\end{titlepage}
+\clearpage
+
+\pagenumbering{arabic}
+
+\section{Electric and Magnetic Fields}
+\subsection{Electric Fields}
+Objects which have electric charge create a field around themselves called an
+electric field which can exert forces on other charged particles. The strength 
+of an electric field is measured force per unit positive charge. Electric fields
+can be represented graphically by drawing lines showing the direction of the
+field at different points. Arrows always point from positive to negative. 
+(\SI{}{\newton\per\coulomb}).
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture*} (-6,-4) (6,4)
+    \psElectricfield[Q={[1 -2 0][-1 2 0]},linecolor=black]
+\end{pspicture*}
+\end{center}
+\caption{The electric field between a positive charge (left) and a negative
+         charge (right)}
+\end{figure}
+
+The force on a charged particle due to an electric field is given by Coulomb's
+law: 
+$$F=\frac{Qq}{4\pi \epsilon_0 r^2}$$i
+and therefore the electric field strength (force per unit charge) is given by:
+$$E=\frac{Q}{4\pi \epsilon_0 r^2}$$
+
+Between two parallel plates the electric field is uniform and given by 
+$E=\frac{V}{d}$
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture*} (0,0) (0,0)
+\end{pspicture*}
+\end{center}
+\caption{The electric field between a positive charge (left) and a negative
+         charge (right)}
+\end{figure}
+
+
+\end{document}
