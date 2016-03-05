@@ -1,15 +1,23 @@
-\documentclass[a4,8pt]{article} \usepackage[margin=3cm,includefoot]{geometry}
-\usepackage{siunitx} \usepackage{fancyhdr} \usepackage{tikz}
-\usetikzlibrary{arrows,shapes,positioning,calc} \usepackage[font=it]{caption}
-\usepackage{amsmath} \usepackage{float}
+\documentclass[a4,8pt]{article}
+\usepackage[margin=3cm,includefoot]{geometry}
+\usepackage{siunitx}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+	\usetikzlibrary{arrows,shapes,positioning,calc}
+\usepackage[font=it]{caption}
+\usepackage{amsmath}
+\usepackage{float}
 
-\pagestyle{fancy} \lfoot{\sc Charlie Haddon}
+\pagestyle{fancy}
+\lfoot{\sc Charlie Haddon}
 
-\title{G484: Newtonian World} \author{Charlie Haddon}
+\title{G484: Newtonian World}
+\author{Charlie Haddon}
 
 \begin{document}
 \begin{titlepage}
-	\pagenumbering{} \maketitle
+	\pagenumbering{}
+	\maketitle
 	\vspace{15cm}
 \end{titlepage}
 \clearpage
@@ -58,13 +66,15 @@ $$m_A u_A + m_B u_B = m_A v_A + m_B v_B$$
 Before collision:\\
 \vspace{0.25cm}
 \begin{tikzpicture}[scale=1]
-	\node[circle,draw] at (1,1) (A) {$A$}; \node[below=0.1 of A] (1,1)
-             {$m_A$}; \draw[->] (0.5,1.5) -- (1,1.5) node[above] {$u_A$}; \draw
-             (1,1.5) -- (1.5,1.5);
+	\node[circle,draw] at (1,1) (A) {$A$};
+	\node[below=0.1 of A] (1,1) {$m_A$}; 
+	\draw[->] (0.5,1.5) -- (1,1.5) node[above] {$u_A$};  
+	\draw (1,1.5) -- (1.5,1.5);
 
-	\node[circle,draw] at (3,1) (B) {$B$}; \node[below=0.1 of B] (3,1)
-             {$m_B$}; \draw[->] (2.5,1.5) -- (3,1.5) node[above] {$u_B$}; \draw
-             (3,1.5) -- (3.5,1.5);
+	\node[circle,draw] at (3,1) (B) {$B$};
+	\node[below=0.1 of B] (3,1) {$m_B$}; 
+	\draw[->] (2.5,1.5) -- (3,1.5) node[above] {$u_B$};  
+	\draw (3,1.5) -- (3.5,1.5);
 \end{tikzpicture}
 \\
 \vspace{0.5cm}
@@ -72,13 +82,15 @@ Before collision:\\
 After collision:\\
 \vspace{0.25cm}
 \begin{tikzpicture}[scale=1]
-	\node[circle,draw] at (1,1) (A) {$A$}; \node[below=0.1 of A] (1,1)
-             {$m_A$}; \draw[->] (0.5,1.5) -- (1,1.5) node[above] {$v_A$}; \draw
-             (1,1.5) -- (1.5,1.5);
+	\node[circle,draw] at (1,1) (A) {$A$};
+	\node[below=0.1 of A] (1,1) {$m_A$}; 
+	\draw[->] (0.5,1.5) -- (1,1.5) node[above] {$v_A$};  
+	\draw (1,1.5) -- (1.5,1.5);
 
-	\node[circle,draw] at (3,1) (B) {$B$}; \node[below=0.1 of B] (3,1)
-             {$m_B$}; \draw[->] (2.5,1.5) -- (3,1.5) node[above] {$v_B$}; \draw
-             (3,1.5) -- (3.5,1.5);
+	\node[circle,draw] at (3,1) (B) {$B$};
+	\node[below=0.1 of B] (3,1) {$m_B$}; 
+	\draw[->] (2.5,1.5) -- (3,1.5) node[above] {$v_B$};  
+	\draw (3,1.5) -- (3.5,1.5);
 \end{tikzpicture}
 \caption{Two objects collide and separate}
 \end{center}
@@ -92,13 +104,15 @@ $$m_A u_A + m_B u_B = (m_A + m_B) v_C$$
 Before collision:\\
 \vspace{0.25cm}
 \begin{tikzpicture}[scale=1]
-	\node[circle,draw] at (1,1) (A) {$A$}; \node[below=0.1 of A] (1,1)
-             {$m_A$}; \draw[->] (0.5,1.5) -- (1,1.5) node[above] {$u_A$}; \draw
-             (1,1.5) -- (1.5,1.5);
+	\node[circle,draw] at (1,1) (A) {$A$};
+	\node[below=0.1 of A] (1,1) {$m_A$}; 
+	\draw[->] (0.5,1.5) -- (1,1.5) node[above] {$u_A$};  
+	\draw (1,1.5) -- (1.5,1.5);
 
-	\node[circle,draw] at (3,1) (B) {$B$}; \node[below=0.1 of B] (3,1)
-             {$m_B$}; \draw[->] (2.5,1.5) -- (3,1.5) node[above] {$u_B$}; \draw
-             (3,1.5) -- (3.5,1.5);
+	\node[circle,draw] at (3,1) (B) {$B$};
+	\node[below=0.1 of B] (3,1) {$m_B$}; 
+	\draw[->] (2.5,1.5) -- (3,1.5) node[above] {$u_B$};  
+	\draw (3,1.5) -- (3.5,1.5);
 \end{tikzpicture}
 \\
 \vspace{0.5cm}
@@ -106,9 +120,10 @@ Before collision:\\
 After collision:\\
 \vspace{0.25cm}
 \begin{tikzpicture}[scale=1]
-	\node[circle,draw] at (1,1) (C) {$C$}; \node[below=0.1 of A] (m) {$m_A +
-          m_B$}; \draw[->] (0.5,1.5) -- (1,1.5) node[above] {$v_C$}; \draw
-        (1,1.5) -- (1.5,1.5);
+	\node[circle,draw] at (1,1) (C) {$C$};
+	\node[below=0.1 of A] (m) {$m_A + m_B$}; 
+	\draw[->] (0.5,1.5) -- (1,1.5) node[above] {$v_C$};  
+	\draw (1,1.5) -- (1.5,1.5);
 \end{tikzpicture}
 \caption{Two objects collide and coalesce}
 \end{center}
@@ -127,42 +142,54 @@ radius. One radian is equal to $\frac{180}{\pi}$ degrees.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
-	\filldraw[black] (0,0) circle (1pt); \draw (0,0) -- (2,0); \draw (0,0)
-        -- (1r:2); \draw (2,0) arc (0:1r:2); \draw (0.3,0) arc (0:1r:0.3);
+	\filldraw[black] (0,0) circle (1pt);
+	\draw (0,0) -- (2,0);
+	\draw (0,0) -- (1r:2);
+	\draw (2,0) arc (0:1r:2);
+	\draw (0.3,0) arc (0:1r:0.3);
 
-	\node (theta) at (0.5r:0.6) {$1^c$}; \node (r1) at (1,-0.2) {$r$}; \node
-        (r2) at (0.5r:2.2) {$r$};
+	\node (theta) at (0.5r:0.6) {$1^c$};
+	\node (r1) at (1,-0.2) {$r$};
+	\node (r2) at (0.5r:2.2) {$r$};
 \end{tikzpicture}
 \caption{One radian}
 \end{center}
 \end{figure}
 
-Circular motion is the result of a force acting perpendicular to an object's
-velocity, keeping the object at a fixed distance, $r$, from the origin. The
-general term for this force is centripetal force. An object undergoing circular
+Circular motion is the result of a force acting perpendicular to an object's 
+velocity, keeping the object at a fixed distance, $r$, from the origin. The 
+general term for this force is centripetal force. An object undergoing circular 
 motion is not in equilibrium as the resultant force is towards the centre of the
 circle, therefore the object is also accelerating towards the centre of the
 circle (centripetal acceleration). The speed of such an object is equal to
 $\frac{2\pi r}{T}$ where $r$ is the radius of the motion and $T$ is the time
 period (the time taken to complete a full cycle). The cetripetal acceleration is
-equal to $\frac{v^2}{r}$ where $v$ is the linear velocity calculated as before.
-Therefore, by Newton's second law, $F=ma$, centripetal force is equal to
+equal to $\frac{v^2}{r}$ where $v$ is the linear velocity calculated as before. 
+Therefore, by Newton's second law, $F=ma$, centripetal force is equal to 
 $\frac{mv^2}{r}$.
 
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
-	\filldraw[black] (0,0) circle (1pt) node[below] {$O$}; \draw[dashed]
-        (60:2) arc (60:360:2); \draw (0:2) arc (0:60:2); \draw (0:2) -- (60:2);
-        \node at ($(2,0) + (120:1) - (30:0.3)$) {$s$}; \draw (0:0.3) arc
-        (0:60:0.3); \node (theta) at (30:0.6) {$\delta\theta$};
+	\filldraw[black] (0,0) circle (1pt) node[below] {$O$};
+	\draw[dashed] (60:2) arc (60:360:2);
+	\draw (0:2) arc (0:60:2);
+	\draw (0:2) -- (60:2);
+	\node at ($(2,0) + (120:1) - (30:0.3)$) {$s$};
+	\draw (0:0.3) arc (0:60:0.3);
+	\node (theta) at (30:0.6) {$\delta\theta$};
 
-	\draw (0,0) -- (2,0); \node at (1,-0.2) {$r$}; \filldraw[black] (2,0)
-        circle (1pt); \draw[->] (2,0) -- (2,1); \node at (2.3,0.5) {$v_0$};
+	\draw (0,0) -- (2,0);
+	\node at (1,-0.2) {$r$};
+	\filldraw[black] (2,0) circle (1pt);
+	\draw[->] (2,0) -- (2,1);
+	\node at (2.3,0.5) {$v_0$};
 
-	\draw (0,0) -- (60:2); \node at ($(60:1) + (150:0.2)$) {$r$};
-        \filldraw[black] (60:2) circle (1pt); \draw[->] (60:2) -- ++(150:1);
-        \node at ($(60:2) + (150:0.5) + (60:0.3)$) {$v_1$};
+	\draw (0,0) -- (60:2);
+	\node at ($(60:1) + (150:0.2)$) {$r$};
+	\filldraw[black] (60:2) circle (1pt);
+	\draw[->] (60:2) -- ++(150:1);
+	\node at ($(60:2) + (150:0.5) + (60:0.3)$) {$v_1$};
 \end{tikzpicture}
 \caption{Deriving the equation for centripetal acceleration}
 \end{center}
@@ -180,18 +207,21 @@ showing the sources of gravitational field.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
-	\node[draw,circle] (O) at (0,0) {$m$}; \foreach \theta in
-             {0,45,90,135,180,225,270,315} { \draw (O) -- (\theta:1); \draw[->]
-               (\theta:2) -- (\theta:1); }
+	\node[draw,circle] (O) at (0,0) {$m$};
+	\foreach \theta in {0,45,90,135,180,225,270,315}
+	{
+		\draw (O) -- (\theta:1);
+		\draw[->] (\theta:2) -- (\theta:1);
+	}
 \end{tikzpicture}
 \caption{Gravitational field around a massive body}
 \end{center}
 \end{figure}
 
-The constant of proportionality that relates gravitational force to mass and
-distance is $G$ and the equation for the force between two spherical or point
-masses is $F=-\frac{GMm}{r^2}$ where $M$ and $m$ are the masses of the two
-bodies and $r$ is the distance between them. By dividing throughout by one of
+The constant of proportionality that relates gravitational force to mass and 
+distance is $G$ and the equation for the force between two spherical or point 
+masses is $F=-\frac{GMm}{r^2}$ where $M$ and $m$ are the masses of the two 
+bodies and $r$ is the distance between them. By dividing throughout by one of 
 the mass terms, the equation also gives the gravitational field strength of a
 point with distance $r$ from a mass: $g=-\frac{GM}{r^2}$. For large bodies like
 the Earth the gravitational field strength at the surface is approximately
@@ -263,26 +293,25 @@ and the scale in the $t$ direction remains the same. This means that the
 amplitude of the oscillation does not change the frequency or period.
 \vspace{8pt}
 
-The relationships between time and displacement, velocity and acceleration for
-simple harmonic motion where $x=Asin\omega$ ($x=sint$: $\dot{x}=cost$ and
+The relationships between time and displacement, velocity and acceleration for 
+simple harmonic motion where $x=Asin\omega$ ($x=sint$: $\dot{x}=cost$ and 
 $\ddot{x}=-sint$):
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
-	\draw[->] (-1,0 ) -- (4*pi+0.1,0) node[right] {$t$}; \draw[->] (0,-1.5)
-        -- (0,1.5 ) node[above] {};
+	\draw[->] (-1,0  ) -- (4*pi+0.1,0) node[right] {$t$};
+	\draw[->] (0,-1.5) -- (0,1.5     ) node[above] {};
 
-	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,black] plot
-        ({\t},{sin(deg(\t))});
-        \draw[smooth,samples=100,domain=0:4*pi,variable=\t,blue ] plot
-        ({\t},{cos(deg(\t))});
-        \draw[smooth,samples=100,domain=0:4*pi,variable=\t,red ] plot
-        ({\t},{-sin(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,black] 
+        plot ({\t},{sin(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,blue ] 
+        plot ({\t},{cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,red  ] 
+        plot ({\t},{-sin(deg(\t))});
 	
-	\draw[black ] (2*pi-1.5,-1.7) -- (2*pi-0.5,-1.7) node[right]
-             {Displacement}; \draw[blue ] (2*pi-1.5,-2.2) -- (2*pi-0.5,-2.2)
-             node[right] {Velocity}; \draw[red ] (2*pi-1.5,-2.7) --
-             (2*pi-0.5,-2.7) node[right] {Acceleration};
+	\draw[black ] (2*pi-1.5,-1.7) -- (2*pi-0.5,-1.7) node[right] {Displacement};
+	\draw[blue  ] (2*pi-1.5,-2.2) -- (2*pi-0.5,-2.2) node[right] {Velocity};
+	\draw[red   ] (2*pi-1.5,-2.7) -- (2*pi-0.5,-2.7) node[right] {Acceleration};
 \end{tikzpicture}
 \end{center}
 \caption{Simple harmonic motion}
@@ -304,22 +333,25 @@ time.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}[scale=0.9]
-	\draw[->] (-1,0 ) -- (4*pi+0.1,0) node[right] {$t$}; \draw[->] (0,-1.5)
-        -- (0,1.5 ) node[above] {$x$};
-        \draw[smooth,samples=100,domain=0:4*pi,variable=\t,black ] plot
-        ({\t},{cos(deg(\t))});
-        \draw[smooth,samples=100,domain=0:4*pi,variable=\t,blue ] plot
-        ({\t},{exp(-0.2*\t)*cos(deg(\t))});
-        \draw[smooth,samples=100,domain=0:4*pi,variable=\t,red ] plot
-        ({\t},{exp(-0.8*\t)*cos(deg(\t))});
-        \draw[smooth,samples=100,domain=0:4*pi,variable=\t,orange] plot
-        ({\t},{exp(-2*\t)});
+	\draw[->] (-1,0  ) -- (4*pi+0.1,0) node[right] {$t$};
+	\draw[->] (0,-1.5) -- (0,1.5     ) node[above] {$x$};
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,black ] 
+        plot ({\t},{cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,blue  ] 
+        plot ({\t},{exp(-0.2*\t)*cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,red   ] 
+        plot ({\t},{exp(-0.8*\t)*cos(deg(\t))});
+	\draw[smooth,samples=100,domain=0:4*pi,variable=\t,orange] 
+        plot ({\t},{exp(-2*\t)});
 
-	\draw[black ] (2*pi-1.5,-1.7) -- (2*pi-0.5,-1.7) node[right] {Undamped};
-        \draw[blue ] (2*pi-1.5,-2.2) -- (2*pi-0.5,-2.2) node[right] {Light
-          damping}; \draw[red ] (2*pi-1.5,-2.7) -- (2*pi-0.5,-2.7) node[right]
-             {Heavy damping}; \draw[orange] (2*pi-1.5,-3.2) -- (2*pi-0.5,-3.2)
-             node[right] {Critical damping};
+	\draw[black ] (2*pi-1.5,-1.7) -- (2*pi-0.5,-1.7) 
+        node[right] {Undamped};
+	\draw[blue  ] (2*pi-1.5,-2.2) -- (2*pi-0.5,-2.2) 
+        node[right] {Light damping};
+	\draw[red   ] (2*pi-1.5,-2.7) -- (2*pi-0.5,-2.7) 
+        node[right] {Heavy damping};
+	\draw[orange] (2*pi-1.5,-3.2) -- (2*pi-0.5,-3.2) 
+        node[right] {Critical damping};
 \end{tikzpicture}
 \end{center}
 \caption{Damped oscillation}
@@ -336,23 +368,25 @@ oscillations with large amplitude resulting in structural failure and collapse.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
-	\draw[->] (0,0) -- (3*3.1,0) node[right] {$f$}; \draw[->] (0,0) -- (0,6)
-        node[above] {$A$};
-        \draw[smooth,samples=100,domain=0:3,variable=\f,black] plot
-        ({\f*3},{1/(sqrt((1-\f^2)^2+(0.1*2*\f)^2))});
-        \draw[smooth,samples=100,domain=0:3,variable=\f,blue ] plot
-        ({\f*3},{1/(sqrt((1-\f^2)^2+(0.2*2*\f)^2))});
-        \draw[smooth,samples=100,domain=0:3,variable=\f,red ] plot
-        ({\f*3},{1/(sqrt((1-\f^2)^2+(0.3*2*\f)^2))});
+	\draw[->] (0,0) -- (3*3.1,0) node[right] {$f$};
+	\draw[->] (0,0) -- (0,6) node[above] {$A$};
+	\draw[smooth,samples=100,domain=0:3,variable=\f,black] 
+        plot ({\f*3},{1/(sqrt((1-\f^2)^2+(0.1*2*\f)^2))});
+	\draw[smooth,samples=100,domain=0:3,variable=\f,blue ] 
+        plot ({\f*3},{1/(sqrt((1-\f^2)^2+(0.2*2*\f)^2))});
+	\draw[smooth,samples=100,domain=0:3,variable=\f,red  ] 
+        plot ({\f*3},{1/(sqrt((1-\f^2)^2+(0.3*2*\f)^2))});
 
-	\filldraw[black] (3,0 ) circle (1pt) node[below] {$f_0$};
-        \filldraw[black] (1.5,0) circle (1pt) node[below] {$\frac{1}{2}f_0$};
-        \filldraw[black] (6,0 ) circle (1pt) node[below] {$2f_0$};
+	\filldraw[black] (3,0  ) circle (1pt) node[below] {$f_0$};
+	\filldraw[black] (1.5,0) circle (1pt) node[below] {$\frac{1}{2}f_0$};
+	\filldraw[black] (6,0  ) circle (1pt) node[below] {$2f_0$};
 
-	\draw[black] (1.5*3.1-1.5,-0.7) -- (1.5*3.1-0.5,-0.7) node[right]
-             {Undamped}; \draw[blue ] (1.5*3.1-1.5,-1.2) -- (1.5*3.1-0.5,-1.2)
-             node[right] {Light damping}; \draw[red ] (1.5*3.1-1.5,-1.7) --
-             (1.5*3.1-0.5,-1.7) node[right] {Heavy damping};
+	\draw[black] (1.5*3.1-1.5,-0.7) -- (1.5*3.1-0.5,-0.7) 
+        node[right] {Undamped};
+	\draw[blue ] (1.5*3.1-1.5,-1.2) -- (1.5*3.1-0.5,-1.2) 
+        node[right] {Light damping};
+	\draw[red  ] (1.5*3.1-1.5,-1.7) -- (1.5*3.1-0.5,-1.7) 
+        node[right] {Heavy damping};
 \end{tikzpicture}
 \end{center}
 \caption{Forced oscillation}
@@ -360,7 +394,7 @@ oscillations with large amplitude resulting in structural failure and collapse.
 
 \section{Thermal Physics}
 \subsection{States of Matter}
-Kinetic theory describes substances as structures comprised of particles (atoms,
+Kinetic theory describes substances as structures comprised of particles (atoms, 
 molecules, etc.) with various kinetic energies. Classical kinetic theory allows
 matter to exist in a solid, liquid or gaseous state.
 
@@ -464,8 +498,8 @@ letting the system do work on the surroundings.
 \begin{figure}[H]
 \begin{center}
 \begin{tikzpicture}
-	\draw[->] (0,0) -- (6,0) node[right] {$E$}; \draw[->] (0,0) -- (0,4)
-        node[above] {$\theta$};
+	\draw[->] (0,0) -- (6,0) node[right] {$E$};
+	\draw[->] (0,0) -- (0,4) node[above] {$\theta$};
 
 	\draw (0,0) -- (1,1) -- (2,1) -- (3,2) -- (4,2) -- (5,3);
 \end{tikzpicture}
